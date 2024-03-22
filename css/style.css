@@ -1,0 +1,200 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --backColor: #090909
+}
+@font-face {
+    font-family: Barlow Semi Condensed;
+    src: url(../fonts/BarlowSemiCondensed-Medium.ttf);
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+.dark-theme {
+    background-color: #333;
+transition: all 0.5s ease;
+}
+
+.container{
+    width: 85%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.container .Block{
+    width: 400px;
+    height: 100%;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(255, 250, 249);
+    gap: 15px;
+}
+
+.container .Block .avatarBlock{
+    width: 100%;
+    height: 350px;
+    background-color: #090909;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .Block .avatarBlock .imgBlock{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index:  1;
+    overflow: hidden;
+    border-radius: 50% 50% 0 0 ;
+}
+
+.container .Block .avatarBlock .imgBlock>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  
+}
+
+.container .Block .nameAndContent{
+display: flex;
+height: auto;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+gap: 15px;
+font-family: Barlow Semi Condensed;
+}
+.container .Block .nameAndContent .content{
+    background-color: var(--backColor);
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 30px;
+    color: #fff;
+    font-size: 19px;
+    font-family: Barlow Semi Condensed;
+}
+
+
+.container .Block .nameAndContent  .sclIcons{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 15px;
+}
+
+.container .Block .nameAndContent .sclIcons .icon{
+    background-color: var(--backColor);
+width: 50px;
+height: 50px;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 50%;
+transition: all 0.5s ease;
+}
+
+.container .Block .nameAndContent .sclIcons .icon:hover{
+    transform: scale(1.1);
+}
+
+  .nameAndContent .sclIcons .icon > a {
+color: #fff;
+}
+
+.container .Block .buttonBlock{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+    
+}
+.container .Block .buttonBlock .btn{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .Block .buttonBlock .btn>a{
+
+    font-family: Barlow Semi Condensed;
+    color: var(--backColor);
+    font-size: 20px;
+ border: 3px solid black;
+ width: 100%;padding: 15px;
+ text-align: center;
+ text-decoration: none;
+ transition: all 0.5s ease;
+
+}
+
+.container .Block .buttonBlock .btn>a:hover{
+    border-color: #fff;
+    background-color: var(--backColor);
+    color: #fff;
+}
+
+.toggleLight{
+    width: 80px;
+    height: 5%;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 1px 1px #ccc inset;
+}
+
+.toggleLight>#themeSwitch{
+    -webkit-appearance: none;
+    width: 28px;
+    height: 28px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 3px;
+    left: 10px;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+    background-image: url(../images/sun\ \(3\).png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    outline: none;
+
+}
+
+.toggleLight>#themeSwitch:checked{
+    -webkit-appearance: none;
+   background-image: url(../images/crescent-moon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: blue;
+    left: 40px;
+}
